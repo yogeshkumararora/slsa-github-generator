@@ -17,13 +17,13 @@ package pkg
 import (
 	"testing"
 
-	"github.com/yogeshkumararora/slsa-github-generator/internal/testutil"
-	"github.com/yogeshkumararora/slsa-github-generator/slsa"
+	"github.com/slsa-framework/slsa-github-generator/internal/testutil"
+	"github.com/slsa-framework/slsa-github-generator/slsa"
 )
 
 func TestGenerateProvenance_withErr(t *testing.T) {
 	// Disable pre-submit detection.
-	// TODO(github.com/yogeshkumararora/slsa-github-generator/issues/124): Remove
+	// TODO(github.com/slsa-framework/slsa-github-generator/issues/124): Remove
 	t.Setenv("GITHUB_EVENT_NAME", "non_event")
 	t.Setenv("GITHUB_CONTEXT", "{}")
 	sha256 := "2e0390eb024a52963db7b95e84a9c2b12c004054a7bad9a97ec0c7c89d4681d2"

@@ -23,9 +23,9 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/yogeshkumararora/slsa-github-generator/github"
-	"github.com/yogeshkumararora/slsa-github-generator/internal/runner"
-	"github.com/yogeshkumararora/slsa-github-generator/internal/utils"
+	"github.com/slsa-framework/slsa-github-generator/github"
+	"github.com/slsa-framework/slsa-github-generator/internal/runner"
+	"github.com/slsa-framework/slsa-github-generator/internal/utils"
 )
 
 var unknownTag = "unknown"

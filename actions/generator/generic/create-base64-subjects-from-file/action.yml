@@ -28,7 +28,7 @@ runs:
   steps:
     - name: Generate random value
       id: rng
-      uses: yogeshkumararora/slsa-github-generator/.github/actions/rng@main
+      uses: slsa-framework/slsa-github-generator/.github/actions/rng@main
 
     - name: Generate random name
       id: name
@@ -49,7 +49,7 @@ runs:
 
     - name: Upload file
       id: upload
-      uses: yogeshkumararora/slsa-github-generator/.github/actions/secure-upload-artifact@main
+      uses: slsa-framework/slsa-github-generator/.github/actions/secure-upload-artifact@main
       with:
         name: "${{ steps.name.outputs.artifact_name }}"
         path: "${{ inputs.path }}"
