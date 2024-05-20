@@ -26,11 +26,11 @@ import (
 	intoto "github.com/in-toto/in-toto-golang/in_toto"
 	"github.com/spf13/cobra"
 
-	"github.com/slsa-framework/slsa-github-generator/github"
-	"github.com/slsa-framework/slsa-github-generator/internal/builders/common"
-	"github.com/slsa-framework/slsa-github-generator/internal/utils"
-	"github.com/slsa-framework/slsa-github-generator/signing"
-	"github.com/slsa-framework/slsa-github-generator/slsa"
+	"github.com/yogeshkumararora/slsa-github-generator/github"
+	"github.com/yogeshkumararora/slsa-github-generator/internal/builders/common"
+	"github.com/yogeshkumararora/slsa-github-generator/internal/utils"
+	"github.com/yogeshkumararora/slsa-github-generator/signing"
+	"github.com/yogeshkumararora/slsa-github-generator/slsa"
 )
 
 // attestCmd returns the 'attest' command.
@@ -84,7 +84,7 @@ run in the context of a Github Actions workflow.`,
 			if provider != nil {
 				b.WithClients(provider)
 			} else if utils.IsPresubmitTests() {
-				// TODO(github.com/slsa-framework/slsa-github-generator/issues/124): Remove
+				// TODO(github.com/yogeshkumararora/slsa-github-generator/issues/124): Remove
 				b.WithClients(&slsa.NilClientProvider{})
 			}
 
@@ -92,7 +92,7 @@ run in the context of a Github Actions workflow.`,
 			if provider != nil {
 				g.WithClients(provider)
 			} else if utils.IsPresubmitTests() {
-				// TODO(github.com/slsa-framework/slsa-github-generator/issues/124): Remove
+				// TODO(github.com/yogeshkumararora/slsa-github-generator/issues/124): Remove
 				g.WithClients(&slsa.NilClientProvider{})
 			}
 
