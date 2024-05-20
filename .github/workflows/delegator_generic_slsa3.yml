@@ -182,7 +182,7 @@ jobs:
         uses: ./../__TOOL_ACTION_DIR__
         with:
           slsa-workflow-inputs: ${{ toJson(fromJson(needs.verify-token.outputs.slsa-verified-token).tool.inputs) }}
-          slsa-layout-file: ../${{ env.SLSA_OUTPUTS_DIR }}/${{ env.SLSA_ARTIFACTS_FILE }}
+          slsa-layout-file: ${{ env.SLSA_ARTIFACTS_FILE }}
           slsa-workflow-secret1: ${{ secrets.secret1 }}
           slsa-workflow-secret2: ${{ secrets.secret2 }}
           slsa-workflow-secret3: ${{ secrets.secret3 }}
